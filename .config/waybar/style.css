@@ -1,0 +1,132 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  font-size: 16px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(21, 18, 27, 0);
+  color: #cdd6f4;
+}
+
+tooltip {
+  background: #1e1e2e;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #11111b;
+}
+
+#workspaces button {
+  padding: 5px;
+  color: #fff;
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  background-color: #24283b;
+}
+
+#workspaces button.focused {
+  color: #a6adc8;
+  background: #eba0ac;
+  border-radius: 10px;
+}
+
+#workspaces button.urgent {
+  color: #11111b;
+  background: #a6e3a1;
+  border-radius: 10px;
+}
+
+#workspaces button:hover {
+  background: #11111b;
+  color: #11111b;
+  border-radius: 5px;
+}
+
+#custom-weather,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#workspaces,
+#backlight {
+  background: #1e1e2e;
+  opacity: 0.8;
+  padding: 0px 10px;
+  /* margin: 3px 0px; */
+  margin: 0px 0px;
+  margin-top: 10px;
+  border: 1px solid #181825;
+}
+
+##backlight {
+  border-radius: 10px 0px 0px 10px;
+}
+
+#workspaces {
+  background: #1e1e2e;
+  border-radius: 10px;
+  margin-left: 10px;
+  padding-right: 0px;
+  padding-left: 5px;
+}
+
+#window {
+  border-radius: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+#clock {
+  color: #7aa2f7;
+  border-radius: 10px 0px 0px 10px;
+  margin-left: 10px;
+  border-right: 0px;
+}
+
+#network {
+  color: #7aa2f7;
+  border-radius: 10px 0px 0px 10px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#bluetooth {
+  color: #89b4fa;
+  border-radius: 0px 10px 10px 0px;
+  margin-right: 10px;
+}
+
+#pulseaudio {
+  color: #bb9af7;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#pulseaudio.microphone {
+  color: #cba6f7;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0px 10px 10px 0px;
+  margin-right: 10px;
+}
+
+#battery {
+  color: #2ac3de;
+  border-radius: 0 10px 10px 0;
+  margin-right: 10px;
+  border-left: 0px;
+}
+#battery.warning {
+  color: #ff9e64;
+}
+#battery.critical {
+  color: #f7768e;
+}

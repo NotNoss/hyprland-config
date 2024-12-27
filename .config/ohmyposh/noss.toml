@@ -1,0 +1,112 @@
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[palette]
+  blue = '#7aa2f7'
+  red = '#f7768e'
+
+[secondary_prompt]
+  template = '❯❯ '
+  foreground = 'p:black'
+  background = 'transparent'
+
+[transient_prompt]
+  template = '❯ '
+  foreground = 'p:blue'
+  background = 'transparent'
+  foreground_templates = ['{{if gt .Code 0}}p:red{{end}}', '{{if eq .Code 0}}p:blue{{end}}']
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    template = '{{ .Path }}'
+    foreground = 'p:blue'
+    background = 'transparent'
+    type = 'path'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      style = 'full'
+
+  [[blocks.segments]]
+    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <white>{{if gt .Behind 0}}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    foreground = 'p:blue'
+    background = 'transparent'
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      branch_icon = ''
+      cache_duration = 'none'
+      commit_icon = '@'
+      fetch_status = true
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = '❯'
+    foreground = 'p:blue'
+    background = 'transparent'
+    type = 'text'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+[[blocks]]
+  type = 'rprompt'
+
+  [[blocks.segments]]
+    template = ' '
+    foreground = 'p:green'
+    background = 'transparent'
+    type = 'node'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      display_mode = 'files'
+      fetch_package_manager = false
+      home_enabled = false
+
+  [[blocks.segments]]
+    template = ' '
+    foreground = 'p:blue'
+    background = 'transparent'
+    type = 'go'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      fetch_version = false
+
+  [[blocks.segments]]
+    template = ' '
+    foreground = 'p:yellow'
+    background = 'transparent'
+    type = 'python'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      display_mode = 'files'
+      fetch_version = false
+      fetch_virtual_env = false
+
+  [[blocks.segments]]
+    template = 'at <p:blue><b>{{ .CurrentDate | date .Format }}</b></>'
+    foreground = 'p:white'
+    background = 'transparent'
+    type = 'time'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      time_format = '3:04:05 PM'

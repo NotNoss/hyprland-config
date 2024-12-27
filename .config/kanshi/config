@@ -1,0 +1,9 @@
+profile "no dock" {
+  output eDP-1 mode 1920x1080@60Hz position 0,0 scale 1.2
+}
+
+profile "dock" {
+  output eDP-1 disable
+  output DP-6 mode 1920x1080@119.98Hz position 0,0 scale 1
+  output DP-8 mode 1920x1080@60Hz position 0,1920 scale 1
+}
