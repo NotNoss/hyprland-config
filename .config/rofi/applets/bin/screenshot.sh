@@ -11,7 +11,6 @@ theme="$type/$style"
 
 # Theme Elements
 prompt='Screenshot'
-mesg="DIR: $(xdg-user-dir PICTURES)/Screenshots"
 
 if [[ "$theme" == *'type-1'* ]]; then
   list_col='1'
@@ -74,23 +73,6 @@ if [[ ! -d "$dir" ]]; then
   mkdir -p "$dir"
 fi
 
-# notify and view screenshot
-notify_view() {
-  notify_cmd_shot='dunstify -u low --replace=699'
-  ${notify_cmd_shot} "Copied to clipboard."
-  #viewnior ${dir}/"$file"
-  if [[ -e "$dir/$file" ]]; then
-    ${notify_cmd_shot} "Screenshot Saved."
-  else
-    ${notify_cmd_shot} "Screenshot Deleted."
-  fi
-}
-
-# Copy screenshot to clipboard
-copy_shot() {
-  tee "$file" | xclip -selection clipboard -t image/png
-}
-
 # countdown
 countdown() {
   for sec in $(seq $1 -1 1); do
@@ -101,62 +83,24 @@ countdown() {
 
 # take shots
 shotnow() {
-  cd ${dir} && sleep 0.5 && maim -u -f png | copy_shot
-  #if [[ "$DESKTOP_SESSION" == 'i3' || "$DESKTOP_SESSION" == 'i3-with-shmlog' ]]; then
-  #cd ${dir} && sleep 0.5 && maim -u -f png | copy_shot
-  #elif [[ "$DESKTOP_SESSION" == 'sway' ]]; then
-  #sway-screenshot -m output -o ${dir}
-  #fi
-
-  notify_view
+  hyprshot -m output
 }
 
 shot5() {
   countdown '5'
-  sleep 1 && cd ${dir} && maim -u -f png | copy_shot
-
-  #if [[ "$DESKTOP_SESSION" == 'i3' || "$DESKTOP_SESSION" == 'i3-with-shmlog' ]]; then
-  #sleep 1 && cd ${dir} && maim -u -f png | copy_shot
-  #elif [[ "$DESKTOP_SESSION" == 'sway' ]]; then
-  #sway-screenshot -m output -o ${dir}
-  #fi
-
-  notify_view
 }
 
 shot10() {
   countdown '10'
-  sleep 1 && cd ${dir} && maim -u -f png | copy_shot
-
-  #if [[ "$DESKTOP_SESSION" == 'i3' || "$DESKTOP_SESSION" == 'i3-with-shmlog' ]]; then
-  #sleep 1 && cd ${dir} && maim -u -f png | copy_shot
-  #elif [[ "$DESKTOP_SESSION" == 'sway' ]]; then
-  #sway-screenshot -m output -o ${dir}
-  #fi
-
-  notify_view
+  hyprshot -m output
 }
 
 shotwin() {
-  cd ${dir} && maim -u -f png -i $(xdotool getactivewindow) | copy_shot
-  #if [[ "$DESKTOP_SESSION" == 'i3' || "$DESKTOP_SESSION" == 'i3-with-shmlog' ]]; then
-  #cd ${dir} && maim -u -f png -i `xdotool getactivewindow` | copy_shot
-  #elif [[ "$DESKTOP_SESSION" == 'sway' ]]; then
-  #sway-screenshot -m window -o ${dir}
-  #fi
-
-  notify_view
+  hyprshot -m window
 }
 
 shotarea() {
-  cd ${dir} && maim -u -f png -s -b 2 -c 0.35,0.55,0.85,0.25 -l | copy_shot
-  #if [[ "$DESKTOP_SESSION" == 'i3' || "$DESKTOP_SESSION" == 'i3-with-shmlog' ]]; then
-  #cd ${dir} && maim -u -f png -s -b 2 -c 0.35,0.55,0.85,0.25 -l | copy_shot
-  #elif [[ "$DESKTOP_SESSION" == 'sway' ]]; then
-  #sway-screenshot -m region -o ${dir}
-  #fi
-
-  notify_view
+  hyprshot -m region
 }
 
 # Execute Command

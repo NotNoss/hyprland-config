@@ -7,6 +7,7 @@ export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH:
 export EDITOR="nvim"
+export HYPRSHOT_DIR="/home/noss/Pictures/Screenshots"
 
 # Download Zinit
 if [ ! -d "$ZINIT_HOME" ]; then
