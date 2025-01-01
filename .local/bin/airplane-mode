@@ -41,6 +41,6 @@ notification() {
 }
 
 update_airplane_mode
-toggle_bluetooth
 toggle_wifi
+#toggle_bluetooth
 notification
