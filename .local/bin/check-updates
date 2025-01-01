@@ -13,7 +13,7 @@ fi
 updates=$((updates_arch + updates_aur))
 
 if [ "$updates" -gt 0 ]; then
-  notify-send -a "System Updates" "System Updates" "There are system updates available"
+  notify-send -a "System" "System Updates" "There are system updates available"
 else
   echo ""
 fi
