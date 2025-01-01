@@ -73,10 +73,12 @@ tooltip {
 
 #custom-weather {
   border-radius: 0 10px 10px 0;
+  border-left-style: none;
 }
 
 #backlight {
   border-radius: 10px 0px 0px 10px;
+  border-right-style: none;
 }
 
 #workspaces {
@@ -97,20 +99,20 @@ tooltip {
   color: #7aa2f7;
   border-radius: 10px 0px 0px 10px;
   margin-left: 10px;
-  border-right: 0px;
+  border-right-style: none;
 }
 
 #network {
   color: #7aa2f7;
   border-radius: 10px 0px 0px 10px;
   border-left: 0px;
-  border-right: 0px;
+  border-right-style: none;
 }
 
 #pulseaudio {
   color: #bb9af7;
-  border-left: 0px;
-  border-right: 0px;
+  border-left-style: none;
+  border-right-style: none;
 }
 
 #pulseaudio.microphone {
