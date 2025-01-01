@@ -179,7 +179,7 @@
 }
 
 .blank-window {
-  background: alpha(black, 0.1);
+  background: alpha(black, 0);
 }
 
 .widget-title {
