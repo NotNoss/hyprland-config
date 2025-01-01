@@ -1,0 +1,16 @@
+#!/bin/sh
+
+check_power() {
+  echo -e "$(bluetoothctl show | grep "PowerState:" | awk '{print $2}')"
+}
+
+powerStatus="$(check_power)"
+toggle_power() {
+  if [[ $powerStatus == "on" ]]; then
+    bluetoothctl power off
+    return 0
+  else
+    bluetoothctl power on
+    return 0
+  fi
+}

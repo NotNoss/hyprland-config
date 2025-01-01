@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#!/bin/sh
+export XDG_RUNTIME_DIR=/run/user/1000
 
 if ! updates_arch=$(pacman -Qu 2>/dev/null | wc -l); then
   updates_arch=0

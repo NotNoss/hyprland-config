@@ -1,0 +1,46 @@
+#!/bin/sh
+
+export XDG_RUNTIME_DIR=/run/user/1000
+
+airplane_mode="yes"
+
+update_airplane_mode() {
+  if [[ $airplane_mode == "yes" ]]; then
+    sed -i '5s/yes/no/' /home/noss/.local/bin/airplane-mode
+  else
+    sed -i '5s/no/yes/' /home/noss/.local/bin/airplane-mode
+  fi
+}
+
+toggle_bluetooth() {
+  if [[ $airplane_mode == "yes" ]]; then
+    bluetoothctl power off
+    return 0
+  else
+    bluetoothctl power on
+    return 0
+  fi
+}
+
+toggle_wifi() {
+  if [[ $airplane_mode == "yes" ]]; then
+    nmcli radio all off
+    return 0
+  else
+    nmcli radio all on
+    return 0
+  fi
+}
+
+notification() {
+  if [[ $airplane_mode == "yes" ]]; then
+    notify-send -a "System" "Airplane Mode" "Airplane mode enabled"
+  else
+    notify-send -a "System" "Airplane Mode" "Airplane mode disabled"
+  fi
+}
+
+update_airplane_mode
+toggle_bluetooth
+toggle_wifi
+notification

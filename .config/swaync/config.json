@@ -63,20 +63,12 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": "󰐥",
-          "command": "systemctl poweroff"
-        },
-        {
-          "label": "󰌾",
-          "command": "hyprlock"
-        },
-        {
-          "label": "󰍃",
-          "command": "hyprctl dispatch exit"
+          "label": "",
+          "command": "toggle-wifi"
         },
         {
           "label": "󰀝",
-          "command": ""
+          "command": "airplane-mode"
         },
         {
           "label": "󰝟",
@@ -84,7 +76,7 @@
         },
         {
           "label": "󰂯",
-          "command": "blueman-manager"
+          "command": "toggle-bluetooth"
         }
       ]
     }
