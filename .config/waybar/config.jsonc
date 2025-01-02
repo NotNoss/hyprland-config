@@ -44,7 +44,8 @@
     "exec": "~/.config/waybar/scripts/weather.sh"
   },
   "hyprland/window": {
-    "format": "{}"
+    "format": "{}",
+    "icon": true
   },
   "clock": {
     "format": "  {:%I:%M %p   %a, %b %e}",
