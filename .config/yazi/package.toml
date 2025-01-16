@@ -1,0 +1,5 @@
+[plugin]
+deps = [{ use = "ahkohd/eza-preview", rev = "5ef05bc" }, { use = "Reledia/glow", rev = "5ce76dc" }, { use = "AnirudhG07/rich-preview", rev = "8be4d27" }]
+
+[flavor]
+deps = []
