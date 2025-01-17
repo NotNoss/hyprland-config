@@ -1,5 +1,5 @@
 [plugin]
-deps = [{ use = "ahkohd/eza-preview", rev = "5ef05bc" }, { use = "Reledia/glow", rev = "5ce76dc" }, { use = "AnirudhG07/rich-preview", rev = "8be4d27" }]
+deps = [{ use = "ahkohd/eza-preview", rev = "5ef05bc" }, { use = "Reledia/glow", rev = "5ce76dc" }, { use = "AnirudhG07/rich-preview", rev = "8be4d27" }, { use = "llanosrocas/yaziline", rev = "864572c" }, { use = "yazi-rs/plugins:max-preview", rev = "600614a" }, { use = "KKV9/compress", rev = "60b24af" }, { use = "SL-RU/mount", rev = "e494101" }, { use = "AnirudhG07/custom-shell", rev = "2f3d7a6" }]
 
 [flavor]
 deps = []

@@ -9,6 +9,10 @@ prepend_keymap = [
   { on = [ "-" ], run = "plugin eza-preview --args='--inc-level'", desc = "Increment tree level" },
   { on = [ "_" ], run = "plugin eza-preview --args='--dec-level'", desc = "Decrement tree level" },
   { on = [ "$" ], run = "plugin eza-preview --args='--toggle-follow-symlinks'", desc = "Toggle tree follow symlinks" },
+  { on = [ "T" ], run = "plugin max-preview", desc = "Maximize or restore preview" },
+  { on = [ "c", "a" ], run  = "plugin compress", desc = "Archive selected files" },
+  { on = "M", run = "plugin mount", desc = "Mount manager" },
+  { on = [ ":" ], run = 'plugin custom-shell --args="auto --interactive"', desc = "custom-shell as default" },
 ]
 
 keymap = [
