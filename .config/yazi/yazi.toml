@@ -49,31 +49,28 @@ text = [
 ]
 
 document = [
-  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
-  { run = 'libreoffice "$@"', orphan = true, desc = "libreoffice", for = "linux" },
-]
-
-pdf = [
   { run = 'zathura "$@"', orphan = true, desc = "zathura", for = "linux" },
+  { run = 'libreoffice "$@"', orphan = true, desc = "libreoffice", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
 ]
 
 image = [
-  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
   { run = 'qimgv "$@"', orphan = true, desc = "qimgv", for = "linux" },
   { run = 'krita "$@"', orphan = true, desc = "krita", for = "linux" },
   { run = 'satty --filename "$@"', orphan = true, desc = "satty", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
 ]
 
 video = [
-  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
   { run = 'mpv "$@"', orphan = true, desc = "mpv", for = "linux" },
   { run = 'vlc "$@"', orphan = true, desc = "vlc", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
 ]
 
 audio = [
-  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
   { run = 'mpv "$@"', orphan = true, desc = "mpv", for = "linux" },
   { run = 'vlc "$@"', orphan = true, desc = "vlc", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
 ]
 
 fallback = [
@@ -99,7 +96,7 @@ rules = [
   { mime = "application/x-tar", use = "archive" },
   { mime = "application/x-7z-compressed", use = "archive" },
   { mime = "application/x-rar", use = "archive" },
-  { mime = "application/pdf", use = "pdf" },
+  { mime = "application/pdf", use = "document" },
   { mime = "application/epub+zip", use = "document" },
   { mime = "application/x-mobipocket-ebook", use = "document" },
 
