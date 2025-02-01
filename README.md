@@ -1,6 +1,8 @@
 # Hyperland Config
 
-This is my hyprland config. Feel free to copy, some of it was copied anyway.
+This is my hyprland config. Feel free to copy, some of it was copied and edited anyway.
+
+Some of the config is Catppuccin instead of Tokyonight, that's because Catppuccin has so many ports and I haven't made a Tokyonight theme yet.
 
 Screenshots to come
 

@@ -1,1 +1,8 @@
 .config/tmux/plugins/
+.config/obs-studio/basic
+.config/obs-studio/logs
+.config/obs-studio/plugin_config
+.config/obs-studio/profiler_data
+.config/obs-studio/global.ini
+.config/obs-studio/safe_mode
+.config/obs-studio/user.ini
