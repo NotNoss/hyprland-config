@@ -4,6 +4,10 @@ This is my hyprland config. Feel free to copy, some of it was copied and edited 
 
 Some of the config is Catppuccin instead of Tokyonight, that's because Catppuccin has so many ports and I haven't made a Tokyonight theme yet.
 
+## Roadmap
+ - Create Tokyonight theme for OBS
+ - Create Tokyonight theme for Zathura
+
 Screenshots to come
 
 ## Applications
