@@ -1,5 +1,17 @@
 #!/bin/sh
 
+check_network() {
+  wget -q --spider http://google.com
+
+  if [ $? -eq 0 ]; then
+    return
+  else
+    check_network
+  fi
+}
+
+check_network
+
 TEMPERATURE=$(curl "wttr.in/?format=j1" | grep "FeelsLikeF" | awk 'NR==1{print $2}' | sed -e 's/^"//' -e 's/",//')
 
 WEATHER_CODE=$(curl "wttr.in/?format=j1" | grep "weatherCode" | awk 'NR==1{print $2}' | sed -e 's/^"//' -e 's/",//')

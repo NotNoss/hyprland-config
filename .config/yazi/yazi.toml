@@ -89,9 +89,10 @@ suppress_preload = false
 
 prepend_previewers = [
   { name = "*/", run = "eza-preview" },
-  { name = "*.csv", run = "rich-preview"},
-  { name = "*.md", run = "rich-preview" },
-  { name = "*.json", run = "rich-preview"},
+  { name = "*.csv", run = "rich-preview" },
+  #{ name = "*.md", run = "rich-preview" },
+  { name = "*.json", run = "rich-preview" },
+  { name = "*.md", run = "glow" },
 ]
 
 fetchers = [
