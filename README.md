@@ -7,6 +7,7 @@ Some of the config is Catppuccin instead of Tokyonight, that's because Catppucci
 ## Roadmap
  - Create Tokyonight theme for OBS
  - Create Tokyonight theme for Zathura
+ - Create Tokyonight theme for Lazygit
 
 Screenshots to come
 
