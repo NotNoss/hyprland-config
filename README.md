@@ -9,6 +9,8 @@ Some of the config is Catppuccin instead of Tokyonight, that's because Catppucci
  - Create Tokyonight theme for Zathura
  - Create Tokyonight theme for Lazygit
  - Create Tokyonight theme for Lazydocker
+ - Create Tokyonight theme for btop
+ - Create Tokyonight theme for qimgv
 
 Screenshots to come
 
