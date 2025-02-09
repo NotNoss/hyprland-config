@@ -7,12 +7,4 @@ profile "dock" {
   output DP-6 mode 1920x1080@119.98Hz position 1920,1080 scale 1
   output DP-8 mode 1920x1080@60Hz position 0,1080 scale 1
   output DP-2 mode 1920x1080@60Hz position 3840,1080 scale 1
-  exec hyprctl keyword workspace 1, monitor:DP-6
-  exec hyprctl dispatch moveworkspacetomonitor 1 DP-6
-  exec hyprctl keyword workspace 2, monitor:DP-8
-  exec hyprctl dispatch moveworkspacetomonitor 2 DP-8
-  exec hyprctl keyword workspace 3, monitor:DP-2
-  exec hyprctl dispatch moveworkspacetomonitor 3 DP-2
-  exec hyprctl keyword workspace 4, monitor:eDP-1
-  exec hyprctl dispatch moveworkspacetomonitor 4 eDP-1
 }
