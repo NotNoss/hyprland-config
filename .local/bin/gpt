@@ -1,0 +1,27 @@
+#!/bin/sh
+
+api_key=$(pass show openai)
+
+printf "Type in a question: "
+read question
+
+response=$(curl https://api.openai.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $api_key" \
+  -d "{
+    \"model\": \"gpt-4o\",
+    \"messages\": [
+      {
+        \"role\": \"system\",
+        \"content\": \"You are a helpful assistant.\"
+      },
+      {
+        \"role\": \"user\",
+        \"content\": \"$question\"
+      }
+    ]
+  }")
+
+actual_reponse=$(echo $response | jq -r '.choices[0].message.content')
+
+echo $actual_reponse
