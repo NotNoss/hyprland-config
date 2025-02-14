@@ -24,4 +24,4 @@ response=$(curl https://api.openai.com/v1/chat/completions \
 
 actual_reponse=$(echo $response | jq -r '.choices[0].message.content')
 
-echo $actual_reponse
+printf "%s\n" "$actual_reponse" | fold -s
