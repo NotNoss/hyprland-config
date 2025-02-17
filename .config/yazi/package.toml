@@ -1,5 +1,37 @@
-[plugin]
-deps = [{ use = "ahkohd/eza-preview", rev = "5ef05bc" }, { use = "AnirudhG07/rich-preview", rev = "8be4d27" }, { use = "llanosrocas/yaziline", rev = "864572c" }, { use = "yazi-rs/plugins:max-preview", rev = "600614a" }, { use = "KKV9/compress", rev = "60b24af" }, { use = "SL-RU/mount", rev = "e494101" }, { use = "AnirudhG07/custom-shell", rev = "2f3d7a6" }]
+[[plugin.deps]]
+use = "ahkohd/eza-preview"
+rev = "5ef05bc"
+hash = "b509ef28e484a524cbac179c620d9974"
+
+[[plugin.deps]]
+use = "AnirudhG07/rich-preview"
+rev = "8be4d27"
+hash = "c9a3d0731e7d7340e2c6d6126b1f3aa3"
+
+[[plugin.deps]]
+use = "llanosrocas/yaziline"
+rev = "864572c"
+hash = "2824dd15741717ccee82e232ccf894d7"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:max-preview"
+rev = "600614a"
+hash = "9bc26d10d2f6e2aa93b10905b1b76979"
+
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "60b24af"
+hash = "ee025be766240cc98e671754ac836da3"
+
+[[plugin.deps]]
+use = "SL-RU/mount"
+rev = "e494101"
+hash = "533c94434955e44fd8ebdb9c140f7c87"
+
+[[plugin.deps]]
+use = "AnirudhG07/custom-shell"
+rev = "2f3d7a6"
+hash = "bf2dfe68c5dff1dbb898013e4545507e"
 
 [flavor]
 deps = []

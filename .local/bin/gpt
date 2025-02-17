@@ -2,10 +2,10 @@
 
 api_key=$(pass show openai)
 
-printf "Type in a question: "
-read question
+prompt="$@"
 
-response=$(curl https://api.openai.com/v1/chat/completions \
+function api_call() {
+  response=$(curl -sS https://api.openai.com/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $api_key" \
   -d "{
@@ -17,11 +17,24 @@ response=$(curl https://api.openai.com/v1/chat/completions \
       },
       {
         \"role\": \"user\",
-        \"content\": \"$question\"
+        \"content\": \"$1\"
       }
     ]
   }")
+}
 
-actual_reponse=$(echo $response | jq -r '.choices[0].message.content')
+if [ -z "$prompt" ]; then
+  while true; do
+    printf "User Prompt > "
+    read prompt
 
-printf "%s\n" "$actual_reponse" | fold -s
+    api_call "$prompt"
+
+    actual_reponse=$(echo $response | jq -r '.choices[0].message.content')
+    printf "%s\n" "$actual_reponse" | fold -s
+  done
+else
+  api_call "$prompt"
+  actual_reponse=$(echo $response | jq -r '.choices[0].message.content')
+  printf "%s\n" "$actual_reponse" | fold -s
+fi

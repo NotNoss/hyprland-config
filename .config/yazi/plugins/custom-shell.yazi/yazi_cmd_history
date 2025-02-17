@@ -1,1 +1,2 @@
 zsh -ic 'q; exit'
+zsh -ic 'qa; exit'
