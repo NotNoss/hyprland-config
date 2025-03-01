@@ -1,7 +1,5 @@
 # Hyperland Config
 
-This is my hyprland config. Feel free to copy, some of it was copied and edited anyway.
-
 Some of the config is Catppuccin instead of Tokyonight, that's because Catppuccin has so many ports and I haven't made a Tokyonight theme yet.
 
 ## Roadmap
@@ -11,8 +9,10 @@ Some of the config is Catppuccin instead of Tokyonight, that's because Catppucci
  - Create Tokyonight theme for Lazydocker
  - Create Tokyonight theme for btop
  - Create Tokyonight theme for qimgv
+ - Create Wallpaper changer
+ - Create Theme changer
 
-Screenshots to come
+![](./assets/fastfetch-yazi-cava.png)
 
 ## Applications
  - WM - [Hyprland](https://hyprland.org/)
