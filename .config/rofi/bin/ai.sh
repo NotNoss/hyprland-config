@@ -16,7 +16,7 @@ history_file="/tmp/rofi_ai_history.txt"
 # Get Anthropic Model Name
 anth_model_name() {
   json=$(curl -s https://api.anthropic.com/v1/models/${model} \
-    --header "x-api-key: $(pass show anthropic)" \
+    --header "x-api-key: $(pass show api_keys/anthropic)" \
     --header "anthropic-version: $version")
 
   name=$(echo "$json" | jq .display_name)

@@ -6,4 +6,6 @@
     selected:                    #33467CFF;
     active:                      #414868FF;
     urgent:                      #F7768EFF;
+    image-w:                     url("/home/noss/hyprland-config/Pictures/wallpapers/Tokyonight/tn-glados-better.jpg", width);
+    image-h:                     url("/home/noss/hyprland-config/Pictures/wallpapers/Tokyonight/tn-glados-better.jpg", height);
 }

@@ -1,7 +1,7 @@
 #!/bin/sh
 
-url=$(pass show share | grep "url" | awk '{ print $2 }')
-username=$(pass show share | grep "username" | awk '{ print $2 }')
-password=$(pass show share | sed 1q)
+url=$(pass show shares/share | grep "url" | awk '{ print $2 }')
+username=$(pass show shares/share | grep "username" | awk '{ print $2 }')
+password=$(pass show shares/share | sed 1q)
 
 sudo mount -t cifs $url /home/noss/Documents/share/ -o username=$username,password=$password

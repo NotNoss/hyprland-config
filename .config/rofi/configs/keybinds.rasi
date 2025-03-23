@@ -71,42 +71,7 @@ mainbox {
     border-radius:               0px 0px 0px 0px;
     border-color:                @border-color;
     background-color:            transparent;
-    children:                    [ "inputbar", "message", "mode-switcher" ];
-}
-
-/*****----- Inputbar -----*****/
-inputbar {
-    enabled:                     true;
-    spacing:                     10px;
-    margin:                      0px;
-    padding:                     10px;
-    border:                      0px 0px 1px 0px;
-    border-radius:               0px;
-    border-color:                @border-color;
-    background-color:            @alternate-background;
-    text-color:                  @foreground-color;
-    children:                    [ "prompt", "entry" ];
-}
-
-prompt {
-    enabled:                     true;
-    background-color:            inherit;
-    text-color:                  inherit;
-}
-textbox-prompt-colon {
-    enabled:                     true;
-    expand:                      false;
-    str:                         "::";
-    background-color:            inherit;
-    text-color:                  inherit;
-}
-entry {
-    enabled:                     true;
-    background-color:            inherit;
-    text-color:                  inherit;
-    cursor:                      text;
-    placeholder:                 "Search...";
-    placeholder-color:           inherit;
+    children:                    [ "message", "mode-switcher" ];
 }
 
 /*****----- Elements -----*****/

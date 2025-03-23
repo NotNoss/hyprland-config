@@ -12,6 +12,16 @@ configuration {
 	window-format:              "{w} · {c} · {t}";
 }
 
+/*****----- Global Properties -----*****/
+* {
+    background-color:     var(background);
+    foreground-color:     var(foreground);
+    urgent-color:         var(urgent);
+    active-color:         var(active);
+    selected-color:       var(selected);
+    background-alt-color: var(background-alt);
+}
+
 /*****----- Main Window -----*****/
 window {
     /* properties for window widget */
@@ -27,7 +37,7 @@ window {
     enabled:                     true;
     border-radius:               15px;
     cursor:                      "default";
-    background-color:            @background;
+    background-color:            @background-color;
 }
 
 /*****----- Main Box -----*****/
@@ -42,7 +52,7 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/Documents/wallpaper/tn-glados-better.jpg", height);
+    background-image:            @image-h;
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }
@@ -65,8 +75,8 @@ inputbar {
     spacing:                     10px;
     padding:                     15px;
     border-radius:               10px;
-    background-color:            @background-alt;
-    text-color:                  @foreground;
+    background-color:            @background-alt-color;
+    text-color:                  @foreground-color;
     children:                    [ "textbox-prompt-colon", "entry" ];
 }
 textbox-prompt-colon {
@@ -90,18 +100,18 @@ mode-switcher{
     enabled:                     true;
     spacing:                     20px;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  @foreground-color;
 }
 button {
     padding:                     15px;
     border-radius:               10px;
-    background-color:            @background-alt;
+    background-color:            @background-alt-color;
     text-color:                  inherit;
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @selected;
-    text-color:                  @foreground;
+    background-color:            @selected-color;
+    text-color:                  @foreground-color;
 }
 
 /*****----- Listview -----*****/
@@ -119,7 +129,7 @@ listview {
     
     spacing:                     10px;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  @foreground-color;
     cursor:                      "default";
 }
 
@@ -130,7 +140,7 @@ element {
     padding:                     8px;
     border-radius:               10px;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  @foreground-color;
     cursor:                      pointer;
 }
 element normal.normal {
@@ -138,24 +148,24 @@ element normal.normal {
     text-color:                  inherit;
 }
 element normal.urgent {
-    background-color:            @urgent;
-    text-color:                  @foreground;
+    background-color:            @urgent-color;
+    text-color:                  @foreground-color;
 }
 element normal.active {
     background-color:            @active;
-    text-color:                  @foreground;
+    text-color:                  @foreground-color;
 }
 element selected.normal {
-    background-color:            @selected;
-    text-color:                  @foreground;
+    background-color:            @selected-color;
+    text-color:                  @foreground-color;
 }
 element selected.urgent {
-    background-color:            @urgent;
-    text-color:                  @foreground;
+    background-color:            @urgent-color;
+    text-color:                  @foreground-color;
 }
 element selected.active {
-    background-color:            @urgent;
-    text-color:                  @foreground;
+    background-color:            @urgent-color;
+    text-color:                  @foreground-color;
 }
 element-icon {
     background-color:            transparent;
@@ -178,14 +188,14 @@ message {
 textbox {
     padding:                     15px;
     border-radius:               10px;
-    background-color:            @background-alt;
-    text-color:                  @foreground;
+    background-color:            @background-alt-color;
+    text-color:                  @foreground-color;
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }
 error-message {
     padding:                     15px;
     border-radius:               20px;
-    background-color:            @background;
-    text-color:                  @foreground;
+    background-color:            @background-color;
+    text-color:                  @foreground-color;
 }

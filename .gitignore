@@ -7,3 +7,5 @@
 .config/obs-studio/safe_mode
 .config/obs-studio/user.ini
 .config/btop/btop.log
+.config/aerc/signatures/
+.config/aerc/accounts.conf

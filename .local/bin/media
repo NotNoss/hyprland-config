@@ -1,0 +1,7 @@
+#!/bin/sh
+
+url=$(pass show shares/media | grep "url" | awk '{ print $2 }')
+username=$(pass show shares/media | grep "username" | awk '{ print $2 }')
+password=$(pass show shares/media | sed 1q)
+
+sudo mount -t cifs $url /home/noss/Documents/media/ -o username=$username,password=$password

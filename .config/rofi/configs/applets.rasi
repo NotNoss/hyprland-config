@@ -5,6 +5,16 @@ configuration {
     show-icons:                 false;
 }
 
+/*****----- Global Properties -----*****/
+* {
+    background-color:     var(background);
+    foreground-color:     var(foreground);
+    urgent-color:         var(urgent);
+    active-color:         var(active);
+    selected-color:       var(selected);
+    background-alt-color: var(background-alt);
+}
+
 /*****----- Main Window -----*****/
 window {
     transparency:                "real";
@@ -18,9 +28,9 @@ window {
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @selected-color;
     cursor:                      "default";
-    background-color:            @background;
+    background-color:            @background-color;
 }
 
 /*****----- Main Box -----*****/
@@ -40,10 +50,10 @@ inputbar {
     padding:                     100px 50px;
     border:                      0px;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @selected-color;
     background-color:            transparent;
-    background-image:            url("~/Documents/wallpaper/tn-glados-better.jpg", width);
-    text-color:                  @foreground;
+    background-image:            @image-w;
+    text-color:                  @foreground-color;
     children:                    [ "textbox-prompt-colon", "prompt"];
 }
 
@@ -56,15 +66,15 @@ textbox-prompt-colon {
     str:                         "";
     padding:                     10px 13px;
     border-radius:               0px;
-    background-color:            @urgent;
-    text-color:                  @background;
+    background-color:            @urgent-color;
+    text-color:                  @background-color;
 }
 prompt {
     enabled:                     true;
     padding:                     10px;
     border-radius:               0px;
-    background-color:            @active;
-    text-color:                  @background;
+    background-color:            @active-color;
+    text-color:                  @background-color;
 }
 
 /*****----- Message -----*****/
@@ -74,9 +84,9 @@ message {
     padding:                     10px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @selected-color;
     background-color:            @background-alt;
-    text-color:                  @foreground;
+    text-color:                  @foreground-color;
 }
 textbox {
     background-color:            inherit;
@@ -105,9 +115,9 @@ element {
     padding:                     30px 10px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @selected-color;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  @foreground-color;
     cursor:                      pointer;
 }
 element-text {
@@ -121,22 +131,22 @@ element-text {
 
 element normal.normal,
 element alternate.normal {
-    background-color:            var(background-alt);
-    text-color:                  var(foreground);
+    background-color:            @background-alt-color;
+    text-color:                  @foreground-color;
 }
 element normal.urgent,
 element alternate.urgent,
 element selected.active {
-    background-color:            var(urgent);
-    text-color:                  var(background);
+    background-color:            @urgent-color;
+    text-color:                  @background-color;
 }
 element normal.active,
 element alternate.active,
 element selected.urgent {
-    background-color:            var(active);
-    text-color:                  var(background);
+    background-color:            @active-color;
+    text-color:                  @background-color;
 }
 element selected.normal {
-    background-color:            var(selected);
-    text-color:                  var(background);
+    background-color:            @selected-color;
+    text-color:                  @background-color;
 }

@@ -1,0 +1,13 @@
+start_hyprland() {
+    tmux-killserver
+    hyprland
+}
+
+case $1 in
+  "hypr")
+    start_hyprland
+    ;;
+  *)
+    echo "Unknown arguments"
+    ;;
+esac

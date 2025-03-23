@@ -1,6 +1,6 @@
 #!/bin/sh
 
-api_key=$(pass show openai)
+api_key=$(pass show api_keys/openai)
 
 prompt="$@"
 
